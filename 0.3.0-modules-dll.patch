@@ -1,0 +1,24 @@
+--- origsrc/epsilon-0.3.0.012/src/lib/Epsilon.c	2007-11-29 23:33:18.000000000 -0600
++++ src/epsilon-0.3.0.012/src/lib/Epsilon.c	2008-12-25 16:17:34.068625000 -0600
+@@ -36,6 +36,12 @@
+ #include <Edje.h>
+ #include <dlfcn.h>
+ 
++#ifdef __CYGWIN__
++#define MOD_EXT ".dll"
++#else
++#define MOD_EXT ".so"
++#endif
++
+ static char *PATH_DIR_LARGE = NULL;
+ static char *PATH_DIR_NORMAL = NULL;
+ static char *PATH_DIR_FAIL = NULL;
+@@ -169,7 +175,7 @@
+   dir = opendir(PACKAGE_LIB_DIR "/epsilon/plugins/");
+   if (dir) {
+ 	while ((de = readdir(dir))) {
+-		if (!strncmp(de->d_name + strlen(de->d_name) - 3, ".so", 3)) {
++		if (!strncmp(de->d_name + strlen(de->d_name) - strlen(MOD_EXT), MOD_EXT, strlen(MOD_EXT))) {
+ 			   snprintf(plugin_path, 1024, "%s/%s",
+                            	PACKAGE_LIB_DIR "/epsilon/plugins", de->d_name);
+ 

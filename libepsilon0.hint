@@ -1,0 +1,7 @@
+category: Graphics
+requires: cygwin libecore0 libedje0 libepeg0 libevas0 libimlib2 libpng12
+external-source: epsilon
+sdesc: "Enlightenment thumbnailing library (runtime)"
+ldesc: "This is a small, display independent, and quick thumbnailing 
+library that complies with the Freedesktop.org Thumbnail Management 
+Specification."

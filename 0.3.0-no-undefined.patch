@@ -1,0 +1,17 @@
+--- origsrc/epsilon-0.3.0.012/src/lib/Makefile.am	2007-11-13 00:01:33.000000000 -0600
++++ src/epsilon-0.3.0.012/src/lib/Makefile.am	2008-12-25 16:17:47.521750000 -0600
+@@ -25,4 +25,4 @@
+ 
+ libepsilon_la_LIBADD	= exiftags/libepsilon_exiftags.la @PNG_LIBS@ @EPEG_LIBS@ @EDJE_LIBS@ @ECORE_LIBS@ @EVAS_LIBS@ @IMLIB2_LIBS@
+ libepsilon_la_DEPENDENCIES = ../config.h
+-libepsilon_la_LDFLAGS      = -version-info @version_info@
++libepsilon_la_LDFLAGS      = -version-info @version_info@ -no-undefined
+--- origsrc/epsilon-0.3.0.012/src/plugins/Makefile.am	2007-11-13 00:01:33.000000000 -0600
++++ src/epsilon-0.3.0.012/src/plugins/Makefile.am	2008-12-25 16:18:03.709250000 -0600
+@@ -22,5 +22,5 @@
+ pkg_LTLIBRARIES = $(XINE_L)
+ 
+ xine_thumbnailer_la_SOURCES = xine_thumbnailer.c
+-xine_thumbnailer_la_LDFLAGS = -module -avoid-version
++xine_thumbnailer_la_LDFLAGS = -module -avoid-version -no-undefined
+ xine_thumbnailer_la_LIBADD = @XINE_LIBS@ @IMLIB2_LIBS@ @ECORE_LIBS@

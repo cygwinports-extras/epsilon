@@ -1,0 +1,92 @@
+epsilon
+------------------------------------------
+This is a small, display independent, and quick thumbnailing library 
+that complies with the Freedesktop.org Thumbnail Management 
+Specification.
+
+Runtime requirements:
+  cygwin-1.5.25-15
+  libecore0-0.9.9.050-1
+  libedje0-0.9.9.050-1
+  libepeg0-0.9.1.042-1
+  libevas0-0.9.9.050-1
+  libimlib2-1.4.2-1
+  libpng12-1.2.33-1
+  libxine1-1.1.15-2
+
+Build requirements:
+(besides corresponding -devel packages)
+  autoconf2.5-2.63-1
+  automake1.10-1.10.1-2
+  binutils-20080624-2
+  cygport-0.4.3-1
+  gawk-3.1.6-1
+  gcc-core-3.4.4-3
+  libtool-2.2.6a-1
+  make-3.81-1
+  pkg-config-0.23a-2
+  sed-4.1.5-2
+
+Canonical website:
+  http://www.enlightenment.org/
+
+Canonical download:
+  http://download.enlightenment.org/snapshots/
+
+-------------------------------------------
+
+Build instructions:
+  unpack epsilon-0.3.0.012-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./epsilon-0.3.0.012-X.cygport all
+
+This will create:
+  /usr/src/epsilon-0.3.0.012-X-src.tar.bz2
+  /usr/src/epsilon-0.3.0.012-X.tar.bz2
+  /usr/src/libepsilon-devel-0.3.0.012-X.tar.bz2
+  /usr/src/libepsilon0-0.3.0.012-X.tar.bz2
+  /usr/src/libepsilon0-xine-0.3.0.012-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary packages:
+
+(epsilon)
+  /usr/bin/epsilon.exe
+  /usr/bin/epsilon_thumb_test.exe
+  /usr/bin/epsilon_thumbd.exe
+  /usr/share/doc/epsilon-0.3.0.012/AUTHORS
+  /usr/share/doc/epsilon-0.3.0.012/COPYING
+  /usr/share/doc/epsilon-0.3.0.012/ChangeLog
+  /usr/share/doc/epsilon-0.3.0.012/INSTALL
+  /usr/share/doc/epsilon-0.3.0.012/README
+  /usr/share/doc/epsilon-0.3.0.012/TODO
+
+(libepsilon0)
+  /usr/bin/cygepsilon-0.dll
+
+(libepsilon0-xine)
+  /usr/lib/epsilon/plugins/xine_thumbnailer.dll
+  /usr/lib/epsilon/plugins/xine_thumbnailer.la
+
+(libepsilon-devel)
+  /usr/include/enlightenment/Epsilon.h
+  /usr/include/enlightenment/Epsilon_Plugin.h
+  /usr/include/enlightenment/Epsilon_Request.h
+  /usr/lib/libepsilon.a
+  /usr/lib/libepsilon.dll.a
+  /usr/lib/libepsilon.la
+  /usr/lib/pkgconfig/epsilon.pc
+
+------------------
+
+Port Notes:
+
+----- version 0.3.0.012-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://sourceware.org/cygwinports/
