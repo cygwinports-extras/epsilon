@@ -1,5 +1,5 @@
 category: Graphics
-requires: cygwin libecore0 libepsilon0
+requires: libecore0 libepsilon0
 sdesc: "Enlightenment thumbnailing library (utilities)"
 ldesc: "This is a small, display independent, and quick thumbnailing 
 library that complies with the Freedesktop.org Thumbnail Management 
